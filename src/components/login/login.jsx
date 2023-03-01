@@ -5,7 +5,7 @@ function Login() {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className='Registercontainer' onSubmit={handleSubmit(onSubmit)}>
             <div class="mb-3">
                 <label class="form-label" htmlFor="">Email</label>
                 <input class="form-control" type="email" name="" id="" {...register('email', { required: true, pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" })} />

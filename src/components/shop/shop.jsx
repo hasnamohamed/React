@@ -1,5 +1,5 @@
 import './shop.css';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 function Shop() {
     const [products, setProducts] = useState([]);
@@ -12,18 +12,21 @@ function Shop() {
             .then(json => setProducts(json))
     }
     return (
-        <div className='row parent'>
+        <div className='parent d-flex flex-wrap justify-content-center'>
             {
                 products.map((product) => {
                     return (
-                        <div className="card col-4 cartparent" key={product.id}>
-                            <img className="card-img-top cart-img" src={product.image} alt="" />
+                        <div className="border w-25 mx-2 my-2 p-4 " style={{ backgroundColor: 'rgb(248 245 245)' }} key={product.id}>
+                            <div className="img-wrapper d-flex justify-content-center" style={{ height: '150px' }}>
+                                <img className="w-25" src={product.image} alt="" />
+                            </div>
                             <div className="card-body">
-                                <p className="card-title">{product.title}</p>
-                                <p className="card-text">{product.price}</p>
-                                <p className="card-text">{product.category}</p>
-                                <p className="card-text">{product.description}</p>
-                               <Link to={`/shop/${product.id}`} className="btn btn-primary" type="submit">See Details</Link>
+                                <p className="card-text ">{product.category}</p>
+                                <h4 className="card-text ">EGP: {product.price}</h4>
+                                <div className="rating">
+                                    <p>{product.rating.rate}</p>
+                                </div>
+                                <Link to={`/shop/${product.id}`} className="btn btn-primary mx-auto d-block" type="submit">See Details</Link>
                             </div>
                         </div>
                     );
