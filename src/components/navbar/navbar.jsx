@@ -16,6 +16,9 @@ function NavbarComponent() {
             <Nav.Link as={Link} to="/about" className=' me-2 btn btn-lightbtn btn-outline-secondary'>About</Nav.Link>
             <Nav.Link as={Link} to="/shop" className='me-2 btn btn-lightbtn btn-outline-secondary'>Shop</Nav.Link>
             <Nav.Link as={Link} to="/counter" className='me-2 btn btn-lightbtn btn-outline-secondary'>Counter</Nav.Link>
+            <Nav.Link as={Link} to="/login" className='me-2 btn btn-lightbtn btn-outline-secondary'>Login</Nav.Link>
+            <Nav.Link as={Link} to="/register" className='me-2 btn btn-lightbtn btn-outline-secondary'>Register</Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
